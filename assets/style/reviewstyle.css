@@ -1,0 +1,128 @@
+/* RESET */
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif;}
+body {background:#0f0f0f; color:white; overflow-x:hidden; scroll-behavior:smooth; position:relative;}
+a {text-decoration:none; color:#aaa;}
+a:hover {color:white;}
+
+/* NAVBAR */
+.navbar {
+    position:fixed; width:100%; display:flex; justify-content:space-between;
+    padding:20px 60px; backdrop-filter:blur(15px); background:rgba(0,0,0,0.4); z-index:10;
+}
+.navbar a { margin-left:25px; transition:0.3s; }
+
+/* HERO */
+.hero {
+    height:100vh; display:flex; justify-content:center; align-items:center; text-align:center;
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('assets/images/index1.png');
+    background-size:cover; background-position:center;
+}
+.hero h1 {
+    font-size:80px;
+    background: linear-gradient(90deg, #00f0ff, #8a2eff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 1s ease forwards;
+}
+.hero p { color:#ccc; margin-top:10px; font-size:24px; animation:fadeInUp 1.2s ease forwards; }
+
+/* SECTION TITLES */
+.section { padding:100px 60px; text-align:center; }
+.section h2 { font-size:42px; margin-bottom:40px; }
+
+/* REVIEW CARDS */
+.review-card {
+    max-width:600px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    border-radius:20px;
+    padding:30px;
+    margin:20px auto;
+    box-shadow:0 0 30px rgba(0,240,255,0.3);
+    text-align:left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.review-card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 0 50px rgba(0,240,255,0.5);
+}
+.review-card h3 { color:#00f0ff; font-size:28px; margin-bottom:10px; }
+.review-card p { color:#ccc; line-height:1.6; }
+.review-stars {
+    color: #ffd700;
+    margin-bottom:15px;
+}
+
+/* REVIEW FORM */
+.review-form {
+    max-width:600px;
+    margin:auto;
+    background: rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 30px rgba(0,240,255,0.3);
+}
+.review-form label { display:block; margin-top:15px; margin-bottom:5px; }
+.review-form input, .review-form textarea {
+    width:100%;
+    padding:14px;
+    border-radius:10px;
+    border:none;
+    background:rgba(255,255,255,0.05);
+    color:white;
+}
+.review-form button {
+    margin-top:20px;
+    padding:14px 25px;
+    border:none;
+    border-radius:10px;
+    background: linear-gradient(90deg,#00f0ff,#8a2eff);
+    color:white;
+    cursor:pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.review-form button:hover { transform:scale(1.05); box-shadow:0 0 25px rgba(0,240,255,0.5); }
+
+/* FOOTER */
+.footer {
+    width:100%;
+    background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+    color: #aaa;
+    padding:30px 20px;
+    box-shadow: inset 0 1px 5px rgba(0,0,0,0.3);
+}
+.footer-content { max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+.footer-left a { color:#00f0ff; margin:0 5px; }
+.footer-left a:hover { color:#8a2eff; }
+.footer-right { display:flex; gap:15px; }
+.social-icon { width:24px; height:24px; filter:brightness(0) invert(1); transition: transform 0.3s; }
+.social-icon:hover { transform:scale(1.2); }
+
+/* STAR BACKGROUND */
+#stars { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; }
+body > *:not(#stars) { position: relative; z-index:1; }
+.star { position:absolute; background:#00f0ff; border-radius:50%; animation: twinkle 2s infinite alternate; }
+@keyframes twinkle {0% { transform: scale(1); opacity:0.2; }50% { transform: scale(1.5); opacity:1;}100% { transform: scale(1); opacity:0.2;}}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    .hero h1{font-size:50px;}
+    .hero p{font-size:18px;}
+    .review-card, .review-form{width:90%; padding:20px;}
+}
+
+/* Review Hero full-screen achtergrond */
+.review-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+                url('assets/images/index1.png') center/cover no-repeat;
+}
+
+/* STERREN */
+#stars { position: absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; }
+body > *:not(#stars) { position: relative; z-index:1; }
+.star { position:absolute; background:#00f0ff; border-radius:50%; animation: twinkle 2s infinite alternate; }
+@keyframes twinkle { 0% { transform: scale(1); opacity:0.2; } 50% { transform: scale(1.5); opacity:1; } 100% { transform: scale(1); opacity:0.2; } }

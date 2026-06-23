@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Printing Elite Suite</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- CONNECT TO EXTERN CSS FILE -->
+<link rel="stylesheet" href="assets/style/indexstyle.css">
+
+<style>
+/* HERO */
+.hero {
+    height:100vh; display:flex; justify-content:center; align-items:center; text-align:center;
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('assets/images/index1.png');
+    background-size:cover; background-position:center; overflow:hidden;
+    }
+</style>
+
+</head>
+<body>
+
+<!-- STERREN -->
+<div id="stars"></div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div>3D Elite Suite</div>
+    <div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="info.html">Info</a>
+  </div>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>Next-Level 3D Printing</h1>
+        <p>Precision, Speed & Innovation</p>
+        <a href="#upload" class="btn">Start a Project</a>
+    </div>
+</div>
+
+<!-- OVER ONS -->
+<div class="section" id="about">
+    <h2>About Us</h2>
+    <div class="about-card">
+        <p>
+            At 3D Elite, we combine technology and design to bring complex 3D projects to life.
+            From prototyping to final products, we deliver quality, speed, and precision.
+            Our team of experts guides you from idea to finished product, with a focus on innovation and customization.
+        </p>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section" id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects">
+        <div class="card"><img src="assets/images/lamp.png" alt="3D printed lamp"><div class="card-content"><h3>Lamp</h3><p>Modern lighting design</p></div></div>
+        <div class="card"><img src="assets/images/dino.png" alt="3D printed dinosaur"><div class="card-content"><h3>Dino</h3><p>Complex geometric print</p></div></div>
+        <div class="card"><img src="assets/images/vaasen.png" alt="3D printed vase"><div class="card-content"><h3>Vase</h3><p>Elegant home decor</p></div></div>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
+    <h2>Our Capabilities</h2>
+    <div class="features">
+        <div class="feature"><h3>Prototyping</h3><p>Fast and precise prototyping for product development.</p></div>
+        <div class="feature"><h3>Production</h3><p>Full-scale production of custom parts.</p></div>
+        <div class="feature"><h3>Custom Designs</h3><p>Tailor-made designs, from concept to realization.</p></div>
+        <div class="feature"><h3>Consultancy</h3><p>Expert advice for businesses on 3D printing possibilities and material selection.</p></div>
+    </div>
+</div>
+
+<!-- CTA BLOCK -->
+<div class="cta-block">
+    <h2>Explore 3D Models</h2>
+    <p>Explore a comprehensive library of free and premium 3D models. Get inspired and start printing right away!</p>
+    <a href="https://makerworld.com/nl" target="_blank" class="cta-btn">Explore 3D Models</a>
+</div>
+
+<!-- START PROJECT -->
+<div class="section" id="upload">
+  <div class="start-project">
+    <h2>Start Your Project</h2>
+    <div class="form-box">
+      <form action="https://formspree.io/f/xvoepewj" method="POST" enctype="multipart/form-data">
+        
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="material">Material</label>
+        <select id="material" name="material" required>
+          <option value="PLA">PLA (€0.05/g)</option>
+          <option value="PETG">PETG (€0.08/g)</option>
+          <option value="ABS">ABS (€0.10/g)</option>
+        </select>
+
+        <label for="color">Color</label>
+        <select id="color" name="color" required>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Black">Black</option>
+            <option value="white">white</option>
+            <option value="gray">gray</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="pink">pink</option>
+            <option value="purple">purple</option>
+            <option value="orange">orange</option>
+        </select>
+
+        <label for="fileUpload">Upload your 3D file</label>
+        <input type="file" id="fileUpload" name="file" accept=".stl,.obj,.3mf">
+        <div id="fileName" style="margin-top:5px; color:#ccc;"></div>
+
+        <label for="link">Or the link from the makerworld website</label>
+        <textarea id="link" name="description" placeholder="Put the link from the makerworld in here"></textarea>
+
+        <label for="desc">Project Description</label>
+        <textarea id="desc" name="description" placeholder="Describe your project" required></textarea>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:15px;">
+          <button type="submit">send</button>
+        </div>
+        <div id="priceOutput" style="margin-top:10px; font-weight:bold; color:#fff;"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <p>© 2026 3D Printing Elite Suite</p>
+      <p>
+        <a href="index.html">Home</a> | 
+        <a href="reviews.html">Reviews</a> | 
+        <a href="gallery.html">Gallery</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="info.html">Info</a>
+      </p>
+    </div>
+    <div class="footer-right">
+      <!-- Alleen links toevoegen als er een echte URL is -->
+      <a href="https://facebook.com" target="_blank">
+        <img src="assets/icons/facebook.svg" alt="Facebook" class="social-icon">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="assets/icons/twitter.svg" alt="Twitter" class="social-icon">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="assets/icons/instagram.svg" alt="Instagram" class="social-icon">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- CONNECT TO EXTERN JS FILE -->
+<script src="assets/js/index.js"></script>
+
+</body>
+</html>
